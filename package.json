@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://bilelmoussa.github.io/landsafe",
+  "homepage": "https://bilelmoussa.github.io/landsafe/",
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
