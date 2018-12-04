@@ -83,11 +83,11 @@ $(".arrow_d").on('click', function(event) {
 
 //animation for text
 $(window).scroll(function() {
-  let oTop = $('.text_in_box').offset().top - window.innerHeight;
+  let oTop = $('.text_in_box').offset().top - window.innerHeight + 200;
   if($(window).scrollTop() > oTop){
     $(".text_in_box").each(function(){
       $(this).children().each(function(){
-        $(this).css("animation-name", "animation2")
+        $(this).addClass("animation_1");
       });
     })
   }
@@ -95,9 +95,9 @@ $(window).scroll(function() {
 
 //animation for img
 $(window).scroll(function() {
-  let oTop = $('.img_in_box').offset().top - window.innerHeight;
+  let oTop = $('.img_in_box').offset().top - window.innerHeight + 200;
   if($(window).scrollTop() > oTop){
-    $(".img_in_box").css("animation-name", "animation1");
+    $(".img_in_box").addClass("animation_1");
   }
 })
 
@@ -126,23 +126,25 @@ $(window).scroll(function() {
 
 //animation services titles 
 $(window).scroll(function() {
-    let oTop = $('.services_block').offset().top - window.innerHeight;
+    let oTop = $('.service_title').offset().top - window.innerHeight;
+    this.console.log($('.service_title').offset().top - window.innerHeight)
+    this.console.log($(window).scrollTop());
     if($(window).scrollTop() > oTop){
       $(".service_title").each(function(){
-        $(this).css("animation-name", "animation_3");
+        $(this).addClass("animation_2")
       })
   
     }
 })
 
-
 //social medai animation 
 $(window).scroll(function() {
     $('.moving_bg').each(function(){
-      let oTop = $(this).offset().top - window.innerHeight;
+      let oTop = $(this).offset().top - window.innerHeight + 200;
+      console.log(oTop);
       if($(window).scrollTop() > oTop){
-        $('.moving_img').css("animation-name", "movinbairplane");
-        $('.centent_social').css("animation-name", "movingbg");
+        $('.moving_img').addClass("animation_3");
+        $('.centent_social').addClass("animation_3");
       }
     })
 })
