@@ -501,6 +501,7 @@ div {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   max-height: 100vh;
   min-height: 900px;
@@ -992,7 +993,7 @@ div {
   background-color: #000;
   width: 100%;
   min-height: 300px;
-  height: 25vh; }
+  height: 50vh; }
 
 .background_nmb {
   height: 100%;
@@ -1252,6 +1253,117 @@ div {
   .services_block {
     padding: 60px 0 20px 0; } }
 
+/*--------------------------- CONTACT FORM ----------------------------------------*/
+#contact_form {
+  position: relative;
+  overflow: hidden; }
+  #contact_form .bg_contact_form {
+    position: absolute;
+    background-image: url("/images/fixed_bg.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    background-position-y: 100px; }
+  #contact_form .fff_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.1;
+    border-radius: 15px; }
+  #contact_form .contact_content_form {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 20px 0;
+    margin: 20px 0 40px 0; }
+    #contact_form .contact_content_form .title_contact_form {
+      text-align: center;
+      display: block;
+      position: relative;
+      margin: 20px auto;
+      padding: 15px 10px;
+      min-width: 320px;
+      width: 80%;
+      overflow: hidden;
+      border-radius: 15px;
+      transform: skew(-20deg) translateY(-160%);
+      transition-delay: 1s;
+      transition: all 1s ease; }
+      #contact_form .contact_content_form .title_contact_form h2 {
+        letter-spacing: 4px;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase; }
+      #contact_form .contact_content_form .title_contact_form p {
+        color: #ff2929;
+        letter-spacing: 2px;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin: 0; }
+    #contact_form .contact_content_form .animation_4 {
+      transform: skew(-20deg) translateY(0) !important; }
+    #contact_form .contact_content_form .animation_5 {
+      transform: translate(0) !important; }
+    #contact_form .contact_content_form .sick_under_title {
+      position: relative;
+      margin: 0 auto;
+      min-width: 320px;
+      width: 80%;
+      transform: translateY(50%);
+      transition: all 1s ease;
+      transition-delay: 0.5s; }
+      #contact_form .contact_content_form .sick_under_title .form_msg_us form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 20px 0;
+        z-index: 1; }
+        #contact_form .contact_content_form .sick_under_title .form_msg_us form input, #contact_form .contact_content_form .sick_under_title .form_msg_us form textarea, #contact_form .contact_content_form .sick_under_title .form_msg_us form button {
+          min-width: 300px;
+          width: 40vw;
+          margin: 10px auto;
+          padding: 5px 10px;
+          background-color: transparent;
+          color: #fff;
+          border: 1px solid #fff;
+          border-radius: 5px;
+          font-size: 18px;
+          text-transform: capitalize; }
+        #contact_form .contact_content_form .sick_under_title .form_msg_us form #phone {
+          padding-left: 50px; }
+        #contact_form .contact_content_form .sick_under_title .form_msg_us form .intl-tel-input {
+          display: block;
+          min-width: 300px;
+          width: 40vw;
+          margin: 10px auto; }
+        #contact_form .contact_content_form .sick_under_title .form_msg_us form .intl-tel-input .selected-flag .iti-arrow {
+          border-top: 4px solid #fff; }
+        #contact_form .contact_content_form .sick_under_title .form_msg_us form input::placeholder, #contact_form .contact_content_form .sick_under_title .form_msg_us form textarea::placeholder {
+          color: #ccc;
+          opacity: 1; }
+        #contact_form .contact_content_form .sick_under_title .form_msg_us form button {
+          cursor: pointer;
+          transition: all 0.5s ease; }
+        #contact_form .contact_content_form .sick_under_title .form_msg_us form button:hover {
+          background-color: #f00;
+          opacity: 0.8; }
+  #contact_form .op_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    background-color: #313131; }
+
 /*---------------------------SOCIAL MEDIA SECTION ---------------------------------*/
 .moving_bg {
   position: relative;
@@ -1293,7 +1405,8 @@ div {
       transition: 0.5s ease;
       -webkit-transition: 0.5s ease;
       -o-transition: 0.5s ease;
-      -moz-transition: 0.5s ease; }
+      -moz-transition: 0.5s ease;
+      transform: skew(-3deg); }
       .centent_social a img:hover {
         transform: scale(1.2, 1.2) translateY(-10px);
         -webkit-transform: scale(1.2, 1.2) translateY(-10px);
@@ -1335,6 +1448,11 @@ div {
       color: #f00;
       font-weight: bold;
       text-transform: uppercase; }
+    #lastest_news .latest_news_title p {
+      color: #3c3a3a;
+      letter-spacing: 2px;
+      font-weight: 500;
+      text-transform: capitalize; }
   #lastest_news .lastest_news_content {
     display: flex;
     flex-direction: row;
@@ -1406,50 +1524,63 @@ div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: #222;
-  justify-content: space-around;
+  background-image: url("../images/aaa.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   width: 100%;
-  padding: 10px 10px 60px 10px; }
+  padding: 100px 20px;
+  justify-content: space-between; }
   .contact_info .contact_details {
-    min-width: 320px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    padding: 0 20px;
+    padding: 10px 20px;
     overflow: hidden; }
+    .contact_info .contact_details h5 {
+      text-transform: uppercase;
+      color: #fff; }
     .contact_info .contact_details .email_sec, .contact_info .contact_details .phone_sec, .contact_info .contact_details .gps_sec {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       margin: 10px 0; }
       .contact_info .contact_details .email_sec p, .contact_info .contact_details .phone_sec p, .contact_info .contact_details .gps_sec p {
-        color: #fff;
+        color: #cacaca;
         margin: 0 auto 0 20px;
-        font-size: 20px;
+        font-size: 14px;
         letter-spacing: 1px; }
       .contact_info .contact_details .email_sec img, .contact_info .contact_details .phone_sec img, .contact_info .contact_details .gps_sec img {
         margin: auto 0; }
-  .contact_info .msg_form {
-    min-width: 300px; }
-    .contact_info .msg_form .contact_form {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap; }
-      .contact_info .msg_form .contact_form input, .contact_info .msg_form .contact_form button, .contact_info .msg_form .contact_form textarea {
-        width: 300px;
-        margin: 20px auto;
-        padding: 5px 10px;
-        border-radius: 5px;
-        border: 0;
-        outline: 0;
-        font-size: 14px; }
-      .contact_info .msg_form .contact_form button {
-        background-color: #f00;
-        border: 0px #fff;
-        color: #fff;
-        text-align: center;
-        cursor: pointer;
-        opacity: 0.8; }
+  .contact_info .services_bottom_links, .contact_info .company_bottom_links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px 20px;
+    overflow: hidden;
+    color: #fff; }
+    .contact_info .services_bottom_links h5, .contact_info .company_bottom_links h5 {
+      text-transform: uppercase; }
+    .contact_info .services_bottom_links ul, .contact_info .company_bottom_links ul {
+      padding: 0;
+      list-style: none; }
+    .contact_info .services_bottom_links ul li a, .contact_info .company_bottom_links ul li a {
+      color: #cacaca;
+      position: relative;
+      text-transform: capitalize; }
+      .contact_info .services_bottom_links ul li a:after, .contact_info .company_bottom_links ul li a:after {
+        display: block;
+        position: absolute;
+        transition: width 0.5s ease;
+        content: "";
+        width: 0;
+        height: 1px;
+        background-color: #f00; }
+    .contact_info .services_bottom_links ul li a:hover:after, .contact_info .company_bottom_links ul li a:hover:after {
+      width: 100%; }
+    .contact_info .services_bottom_links ul li, .contact_info .company_bottom_links ul li {
+      margin: 10px 0; }
 
 .copyright {
   text-align: center;
@@ -1464,12 +1595,6 @@ div {
 /*--------------------- intel-tel-phone plug-in -----------------*/
 .iti-flag {
   background-image: url("../images/flags.png"); }
-
-#phone {
-  padding-left: 50px; }
-
-.intl-tel-input {
-  margin: 20px auto; }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .iti-flag {

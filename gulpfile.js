@@ -8,7 +8,8 @@ const babel       = require('gulp-babel');
 
 gulp.task('copyHtml', function(){
     gulp.src('src/*.html')
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist'))
+        .pipe(browserSync.stream());
   });
 
 gulp.task('sass', function() {
