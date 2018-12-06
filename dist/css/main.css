@@ -30,6 +30,43 @@ div {
   .disable_overf {
     overflow: visible !important; } }
 
+.loader_before {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1200;
+  background-color: #222;
+  overflow: hidden; }
+  .loader_before .loader {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    display: block;
+    margin: auto;
+    background: transparent;
+    border-radius: 50%;
+    border: 20px solid #ccc;
+    border-left: 20px solid #f00;
+    transition: opacity 1s;
+    opacity: 0.9;
+    animation: 2s rotate infinite linear; }
+
+.after_loading {
+  opacity: 0 !important;
+  z-index: -1000 !important; }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 /*--------------------------- NAVIGATION ---------------------------*/
 .fixed-top {
   -webkit-transition: background-color 1s;
@@ -523,9 +560,9 @@ div {
   -webkit-animation-duration: 1.5s;
   -o-animation-duration: 1.5s;
   -moz-animation-duration: 1.5s;
-  -webkit-animation-delay: -0.5s;
-  -o-animation-delay: -0.5s;
-  -moz-animation-delay: -0.5s;
+  -webkit-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  -moz-animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
@@ -533,7 +570,7 @@ div {
   -o-animation-timing-function: ease-in;
   -moz-animation-timing-function: ease-in;
   animation-duration: 1.5s;
-  animation-delay: -0.5s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in; }
 
@@ -1382,10 +1419,10 @@ div {
   -webkit-transition: 3s linear;
   -o-transition: 3s linear;
   -moz-transition: 3s linear;
-  transform: translateX(-130vw);
-  -webkit-transform: translateX(-130vw);
-  -o-transform: translateX(-130vw);
-  -moz-transform: translateX(-130vw); }
+  transform: translateX(-180vw);
+  -webkit-transform: translateX(-180vw);
+  -o-transform: translateX(-180vw);
+  -moz-transform: translateX(-180vw); }
 
 .centent_social {
   position: relative;
