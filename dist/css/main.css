@@ -6,7 +6,8 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  /* Prevent scroll on narrow devices */ }
+  /* Prevent scroll on narrow devices */
+  overflow-y: hidden; }
 
 a {
   text-decoration: none !important;
@@ -24,7 +25,7 @@ div {
   -moz-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 .disable_overf {
-  overflow: hidden; }
+  overflow: hidden !important; }
 
 @media (min-width: 551px) {
   .disable_overf {
@@ -34,32 +35,64 @@ div {
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100%;
   z-index: 1200;
   background-color: #222;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: opacity 1s ease; }
   .loader_before .loader {
     position: relative;
-    width: 160px;
-    height: 160px;
+    width: 70px;
+    height: 70px;
     display: block;
     margin: auto;
-    background: transparent;
     border-radius: 50%;
-    border: 20px solid #ccc;
-    border-left: 20px solid #f00;
-    transition: opacity 1s;
-    opacity: 0.9;
-    animation: 2s rotate infinite linear; }
+    border: 10px solid #ccc;
+    border-right: solid 10px #ffffff;
+    border-left: solid 10px #ffffff;
+    border-top: solid 10px #ff0000;
+    border-bottom: solid 10px #ff0000;
+    background-color: #000;
+    transition: opacity 1s ease;
+    animation: 0.8s rotate infinite linear; }
+    .loader_before .loader img {
+      position: relative;
+      display: block;
+      width: 300px;
+      height: 300px;
+      transform: translate(-125px, -125px) rotate(-120deg);
+      border-radius: 50%;
+      background: #ffffff2e;
+      border-bottom: 2px solid #ffffff9e;
+      border-top: 2px solid #ffffff9e; }
+  .loader_before .loader_text {
+    position: relative;
+    width: auto;
+    margin: 0 auto auto auto;
+    color: #fff;
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 4px; }
+    .loader_before .loader_text .dots {
+      display: inline-block;
+      width: 5px;
+      overflow: hidden;
+      vertical-align: bottom;
+      animation: dots 1.5s linear infinite;
+      transition: 1; }
 
 .after_loading {
-  opacity: 0 !important;
-  z-index: -1000 !important; }
+  opacity: 0 !important; }
+
+@keyframes dots {
+  from {
+    width: 0; }
+  to {
+    width: 40px; } }
 
 @keyframes rotate {
   from {
@@ -196,13 +229,13 @@ div {
   -o-transform: scaleX(0);
   -moz-transform: scaleX(0);
   transform: scaleX(0);
-  -webkit-animation: 1.4s forwards no-hover-v linear;
-  -o-animation: 1.4s forwards no-hover-v linear;
-  -moz-animation: 1.4s forwards no-hover-v linear;
+  -webkit-animation: .5s forwards no-hover-v linear;
+  -o-animation: .5s forwards no-hover-v linear;
+  -moz-animation: .5s forwards no-hover-v linear;
   -webkit-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
-  animation: 1.4s forwards no-hover-v linear;
+  animation: .5s forwards no-hover-v linear;
   animation-fill-mode: forwards;
   z-index: -1; }
 
@@ -561,8 +594,8 @@ div {
   -o-animation-duration: 1.5s;
   -moz-animation-duration: 1.5s;
   -webkit-animation-delay: 2s;
-  -o-animation-delay: 2s;
-  -moz-animation-delay: 2s;
+  -o-animation-delay: -0.3s;
+  -moz-animation-delay: -0.3s;
   -webkit-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
@@ -570,21 +603,9 @@ div {
   -o-animation-timing-function: ease-in;
   -moz-animation-timing-function: ease-in;
   animation-duration: 1.5s;
-  animation-delay: 2s;
+  animation-delay: -0.3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in; }
-
-.h1_title h1 {
-  -webkit-animation-name: show_header;
-  -o-animation-name: show_header;
-  -moz-animation-name: show_header;
-  animation-name: show_header; }
-
-.p1_title p, .center_me .header_btn {
-  -webkit-animation-name: show_under_lines;
-  -o-animation-name: show_under_lines;
-  -moz-animation-name: show_under_linesr;
-  animation-name: show_under_lines; }
 
 .slick-dotted.slick-slider {
   margin-bottom: 0 !important; }
@@ -1330,7 +1351,7 @@ div {
       overflow: hidden;
       border-radius: 15px;
       transform: skew(-20deg) translateY(-160%);
-      transition-delay: 1s;
+      transition-delay: 0.5s;
       transition: all 1s ease; }
       #contact_form .contact_content_form .title_contact_form h2 {
         letter-spacing: 4px;
@@ -1347,58 +1368,60 @@ div {
     #contact_form .contact_content_form .animation_4 {
       transform: skew(-20deg) translateY(0) !important; }
     #contact_form .contact_content_form .animation_5 {
-      transform: translate(0) !important; }
+      transform: translate(0) !important;
+      opacity: 1 !important; }
     #contact_form .contact_content_form .sick_under_title {
       position: relative;
       margin: 0 auto;
       min-width: 320px;
-      width: 80%;
-      transform: translateY(50%);
-      transition: all 1s ease;
-      transition-delay: 0.5s; }
-      #contact_form .contact_content_form .sick_under_title .form_msg_us form {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        padding: 20px 0;
-        z-index: 1; }
-        #contact_form .contact_content_form .sick_under_title .form_msg_us form input, #contact_form .contact_content_form .sick_under_title .form_msg_us form textarea, #contact_form .contact_content_form .sick_under_title .form_msg_us form button {
-          min-width: 300px;
-          width: 40vw;
-          margin: 10px auto;
-          padding: 5px 10px;
-          background-color: transparent;
-          color: #fff;
-          border: 1px solid #fff;
-          border-radius: 5px;
-          font-size: 18px;
-          text-transform: capitalize; }
-        #contact_form .contact_content_form .sick_under_title .form_msg_us form #phone {
-          padding-left: 50px; }
-        #contact_form .contact_content_form .sick_under_title .form_msg_us form .intl-tel-input {
-          display: block;
-          min-width: 300px;
-          width: 40vw;
-          margin: 10px auto; }
-        #contact_form .contact_content_form .sick_under_title .form_msg_us form .intl-tel-input .selected-flag .iti-arrow {
-          border-top: 4px solid #fff; }
-        #contact_form .contact_content_form .sick_under_title .form_msg_us form input::placeholder, #contact_form .contact_content_form .sick_under_title .form_msg_us form textarea::placeholder {
-          color: #ccc;
-          opacity: 1; }
-        #contact_form .contact_content_form .sick_under_title .form_msg_us form button {
-          cursor: pointer;
-          transition: all 0.5s ease; }
-        #contact_form .contact_content_form .sick_under_title .form_msg_us form button:hover {
-          background-color: #f00;
-          opacity: 0.8; }
+      width: 80%; }
+      #contact_form .contact_content_form .sick_under_title .form_msg_us {
+        transform: translateY(50%);
+        transition: all 1s ease;
+        opacity: 0; }
+        #contact_form .contact_content_form .sick_under_title .form_msg_us form {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          padding: 20px 0;
+          z-index: 1; }
+          #contact_form .contact_content_form .sick_under_title .form_msg_us form input, #contact_form .contact_content_form .sick_under_title .form_msg_us form textarea, #contact_form .contact_content_form .sick_under_title .form_msg_us form button {
+            min-width: 300px;
+            width: 40vw;
+            margin: 10px auto;
+            padding: 5px 10px;
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            font-size: 18px;
+            text-transform: capitalize; }
+          #contact_form .contact_content_form .sick_under_title .form_msg_us form #phone {
+            padding-left: 50px; }
+          #contact_form .contact_content_form .sick_under_title .form_msg_us form .intl-tel-input {
+            display: block;
+            min-width: 300px;
+            width: 40vw;
+            margin: 10px auto; }
+          #contact_form .contact_content_form .sick_under_title .form_msg_us form .intl-tel-input .selected-flag .iti-arrow {
+            border-top: 4px solid #fff; }
+          #contact_form .contact_content_form .sick_under_title .form_msg_us form input::placeholder, #contact_form .contact_content_form .sick_under_title .form_msg_us form textarea::placeholder {
+            color: #ccc;
+            opacity: 1; }
+          #contact_form .contact_content_form .sick_under_title .form_msg_us form button {
+            cursor: pointer;
+            transition: all 0.5s ease; }
+          #contact_form .contact_content_form .sick_under_title .form_msg_us form button:hover {
+            background-color: #f00;
+            opacity: 0.8; }
   #contact_form .op_bg {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.8;
     background-color: #000; }
 
 /*---------------------------SOCIAL MEDIA SECTION ---------------------------------*/
@@ -1415,10 +1438,10 @@ div {
     width: 300px; }
 
 .moving_img, .centent_social {
-  transition: 3s linear;
-  -webkit-transition: 3s linear;
-  -o-transition: 3s linear;
-  -moz-transition: 3s linear;
+  transition: 3s ease-out;
+  -webkit-transition: 3s ease-out;
+  -o-transition: 3s ease-out;
+  -moz-transition: 3s ease-out;
   transform: translateX(-180vw);
   -webkit-transform: translateX(-180vw);
   -o-transform: translateX(-180vw);
